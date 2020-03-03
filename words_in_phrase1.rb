@@ -22,8 +22,8 @@ class Contents
 
     #as strings de A serao comparadas com as da frase, devidamente quebrada
     #em palavras distintas e armazenada em B, que é convertido em Array por split
-    b.each do |stringAdowncase|
-      c << a_downcase.find{|stringB| stringB == stringAdowncase}
+    b.each do |stringB|
+      c << a_downcase.find{|stringA| stringA == stringB}
     end
 
     c = c.compact #retira nils de c: em caso de false teremos valores nulos no vetor c,
